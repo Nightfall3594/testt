@@ -31,23 +31,25 @@ function NavBar() {
     const [isMobile, setMobile] = useState(window.innerWidth <= 768);
     const [isFrosted, setFrosted] = useState(false);
 
-    const handleResize = () => {
-        setMobile(window.innerWidth <= 768);
-        if(!isMobile) setMobileNavVisible(false);
-    }
-
-    const handleScroll = () => {
-        setFrosted(window.scrollY > 60);
-    }
-
     useEffect( () => {
+        function handleResize(){
+            const isNavMobile = window.innerWidth <= 768;
+            setMobile(isNavMobile);
+            if(!isNavMobile) setMobileNavVisible(false);
+        }
+
+        function handleScroll() {
+            setFrosted(window.scrollY > 60);
+        }
+
         window.addEventListener('resize', handleResize);
         window.addEventListener('scroll', handleScroll);
+
         return () => {
             window.removeEventListener('resize', handleResize)
             window.removeEventListener('scroll', handleScroll);
         };
-    },[])
+    },[]);
 
 
     return (
