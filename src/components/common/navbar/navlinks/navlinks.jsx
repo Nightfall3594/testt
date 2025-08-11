@@ -1,16 +1,16 @@
 import {NavContext} from '../navContext.js';
 import DesktopNavLinks from "./desktop-navlinks.jsx";
 import MobileNavLinks from "./mobile-navlinks.jsx";
+import {useContext} from "react";
 
-function NavLinks({handleClick, children, isMobile, isVisible}) {
+function NavLinks({children}) {
+
+    const {isMobile} = useContext(NavContext);
 
     return (
-        <NavContext.Provider value={{handleClick, isMobile}}>
-            {isMobile
-                ? <MobileNavLinks isVisible={isVisible}>{children}</MobileNavLinks>
-                : <DesktopNavLinks>{children}</DesktopNavLinks>
-            }
-        </NavContext.Provider>
+        isMobile
+            ? <MobileNavLinks>{children}</MobileNavLinks>
+            : <DesktopNavLinks>{children}</DesktopNavLinks>
     )
 }
 

@@ -3,9 +3,25 @@ import {motion} from "framer-motion";
 import NavLinkGlow from "./navlink-glow.jsx";
 
 
+const variants = {
+    default: {
+        transition: {
+            duration: 0.5,
+        }
+    },
+    frosted: {
+        background: "transparent",
+        border: "1px solid transparent",
+        transition: {
+            duration: 0.5,
+        }
+    }
+}
+
 function DesktopNavLinks({children}) {
 
     const [position, setPosition] = useState({x: 0, y: 0})
+    const [isHovered, setHovered] = useState(false);
 
     const handleMouseMove = (event) => {
         const navbar = event.currentTarget;
@@ -20,36 +36,11 @@ function DesktopNavLinks({children}) {
         setPosition({x: xPercent + "%", y: yPercent + "%"});
     }
 
-    const [isHovered, setHovered] = useState(false);
-
-    const handleMouseOut = () => {
-        setHovered(false);
-    };
-
-    const handleMouseEnter = () => {
-        setHovered(true);
-    };
-
-    const variants = {
-        default: {
-            transition: {
-                duration: 0.5,
-            }
-        },
-        frosted: {
-            background: "transparent",
-            border: "1px solid transparent",
-            transition: {
-                duration: 0.5,
-            }
-        }
-    }
-
     return (
         <motion.nav className="navbar__links"
              onMouseMove={handleMouseMove}
-             onMouseLeave={handleMouseOut}
-             onMouseEnter={handleMouseEnter}
+             onMouseLeave={() => setHovered(false)}
+             onMouseEnter={() => setHovered(true)}
              variants={variants}
         >
             <motion.ul layout>

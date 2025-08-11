@@ -1,21 +1,22 @@
 import {AnimatePresence, motion} from "framer-motion";
 
-function NavbarBackdrop({isVisible}){
 
-    const variants = {
-        default: {
-            opacity: 0,
-            transition: {
-                duration: 0.5,
-            },
+const variants = {
+    default: {
+        opacity: 0,
+        transition: {
+            duration: 0.5,
         },
-        frosted: {
-            opacity: 1,
-            transition: {
-                duration: 0.5,
-            }
+    },
+    frosted: {
+        opacity: 1,
+        transition: {
+            duration: 0.5,
         }
     }
+}
+
+function NavbarBackdrop({isVisible}){
 
     return (
         <AnimatePresence>

@@ -1,28 +1,24 @@
 import {AnimatePresence, easeOut, motion} from "framer-motion";
 import React from "react";
+import {NavContext} from "../navContext.js";
 
-function MobileNavLinks({isVisible, children}) {
 
-    const mobileNavLinkVariants = {
-        hidden: {opacity: 0, y: "100%"},
-        show: {
-            y: "0%",
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2,
-                animation: easeOut
-            }
-        },
-        exit: {
-            y: "100%",
-            opacity: 0,
-            transition: {
-                staggerChildren: 0.05,
-                staggerDirection: -1
-            }
+const mobileNavLinkVariants = {
+    hidden: {opacity: 0, y: "100%"},
+    show: {
+        y: "0%",
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: 0.2,
+            animation: easeOut
         }
-    };
+    }
+};
+
+function MobileNavLinks({children}) {
+
+    const {isVisible} = React.useContext(NavContext);
 
     return (
         <AnimatePresence>
@@ -31,7 +27,7 @@ function MobileNavLinks({isVisible, children}) {
                     className="navbar__links"
                     initial="hidden"
                     animate="show"
-                    exit="exit"
+                    exit="hidden"
                     variants={mobileNavLinkVariants}
                 >
                     <motion.ul>

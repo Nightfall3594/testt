@@ -1,15 +1,15 @@
 import {AnimatePresence, motion} from "framer-motion";
 
 
-function NavLinkGlow({isVisible, position}){
-
-    const variants = {
-        visible: {opacity: 1},
-        hidden: {opacity: 0},
-        transition: {
-            duration: 0.3
-        }
+const variants = {
+    visible: {opacity: 1},
+    hidden: {opacity: 0},
+    transition: {
+        duration: 0.3
     }
+}
+
+function NavLinkGlow({isVisible, position}){
 
     return (
         isVisible &&
