@@ -25,9 +25,9 @@ due to backdrop filter interfering with the mobile navlink's positioning
 }
 
 .navbar__profile-image {
-    width: 2em;
-    height: 2em;
-    padding: 20px 0;
+    width: 2.5em;
+    height: 2.5em;
+    padding: 15px 0;
     border-radius: 35%;
 }
 
@@ -109,7 +109,7 @@ due to backdrop filter interfering with the mobile navlink's positioning
     width: 16px;
     height: 16px;
     color: var(--text);
-    padding: 0.35rem;
+    padding: 0.5rem;
     border-radius: 100%;
     border: 1px solid var(--border);
 
@@ -192,7 +192,7 @@ due to backdrop filter interfering with the mobile navlink's positioning
     }
 
     .navbar__links li {
-        padding: 0.35rem 0.75rem;
+        padding: 0.65rem 0.75rem;
         position: relative;
         z-index: 100;
     }
@@ -208,7 +208,7 @@ due to backdrop filter interfering with the mobile navlink's positioning
     }
 
     .navbar__links a {
-        font-size: 14px;
+        font-size: 15px;
         padding: 0;
     }
 
