@@ -94,10 +94,16 @@
     flex-direction: column;
 }
 
+@keyframes bobbing {
+    from { transform: translateY(10px); }
+    to { transform: translateY(0); }
+}
+
 .subtle-scroll__icon {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     color: var(--text);
+    animation: bobbing 0.5s infinite alternate;
 }
 
 /* Desktop styles (Hero) */
