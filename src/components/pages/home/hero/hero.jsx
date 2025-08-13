@@ -52,7 +52,13 @@ function Hero() {
 
                 </motion.div>
 
-                <img src="/images/pfp.jpg" className="hero__image " alt="hero image"/>
+                <motion.img
+                    src="/images/pfp.jpg"
+                    className="hero__image"
+                    alt="hero image"
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1, transition: {duration: 1}}}
+                />
 
             </div>
 
