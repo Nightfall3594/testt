@@ -20,6 +20,7 @@ function HeroLink({className, Icon, to}) {
             href={to}
             variants={variants}
             style={{display: "inline-block"}}
+            whileHover={{ y: -5 }}
         >
             <Icon className={`hero__icon ${className}`}/>
         </motion.a>
