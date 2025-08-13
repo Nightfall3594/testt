@@ -17,6 +17,16 @@ const heroTextContainerVariants = {
     }
 }
 
+const heroLinkContainerVariants = {
+    initial: {opacity: 0},
+    animate: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+}
+
 function Hero() {
     return (
         <section className="hero">
@@ -31,7 +41,10 @@ function Hero() {
                     <HeroText>I'm a <span>&lt;Python Developer/&gt;</span></HeroText>
                     <MutedHeroText>I like to code because I like building stuff</MutedHeroText>
 
-                    <motion.div className="hero__links">
+                    <motion.div
+                        className="hero__links"
+                        variants={heroLinkContainerVariants}
+                    >
                         <HeroLink Icon={Github} className="github-icon" to="#"/>
                         <HeroLink Icon={Mail} className="mail-icon" to="#"/>
                         <HeroLink Icon={Discord} className="discord-icon" to="#"/>
