@@ -3,6 +3,7 @@ import './hero.css'
 import {Mail, Discord, Github, SubtleScroll} from "../../../common/icons/index.js";
 import HeroLink from "./hero-link.jsx";
 import HeroText from "./hero-text.jsx";
+import MutedHeroText from "./muted-hero-text.jsx";
 
 function Hero() {
     return (
@@ -10,7 +11,9 @@ function Hero() {
             <div className="hero__container">
                 <div className="hero__text-container">
 
-                    <HeroText/>
+                    <HeroText>Hi! I'm Nightfall 👋</HeroText>
+                    <HeroText>I'm a <span>&lt;Python Developer/&gt;</span></HeroText>
+                    <MutedHeroText>I like to code because I like building stuff</MutedHeroText>
 
                     <div className="hero__links">
                         <HeroLink Icon={Github} className="hero__icon github-icon" to="#"/>
