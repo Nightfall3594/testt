@@ -29,7 +29,8 @@
     justify-content: center;
 }
 
-.hero__text-container p {
+.hero__text {
+    font-weight: normal;
     text-align: center;
     text-wrap: nowrap;
     font-family: Montserrat, sans-serif;
@@ -37,7 +38,7 @@
     padding: 0.5rem 0;
 }
 
-.hero__text-container span {
+.hero__text span {
     font-size: 25px;
     text-wrap: nowrap;
     font-family: "JetBrains Mono", sans-serif;
@@ -130,12 +131,13 @@
         display: block;
     }
 
-    .hero__text-container p {
+    .hero__text {
+        font-style: normal;
         text-align: left;
         font-size: 36px;
     }
 
-    .hero__text-container span {
+    .hero__text span {
         font-size: 28px;
     }
 
