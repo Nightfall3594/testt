@@ -32,9 +32,9 @@ function Hero() {
                     <MutedHeroText>I like to code because I like building stuff</MutedHeroText>
 
                     <motion.div className="hero__links">
-                        <HeroLink Icon={Github} className="hero__icon github-icon" to="#"/>
-                        <HeroLink Icon={Mail} className="hero__icon mail-icon" to="#"/>
-                        <HeroLink Icon={Discord} className="hero__icon discord-icon" to="#"/>
+                        <HeroLink Icon={Github} className="github-icon" to="#"/>
+                        <HeroLink Icon={Mail} className="mail-icon" to="#"/>
+                        <HeroLink Icon={Discord} className="discord-icon" to="#"/>
                     </motion.div>
 
                 </motion.div>

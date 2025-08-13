@@ -1,8 +1,11 @@
 
 function HeroLink({className, Icon, to}) {
+
+    if (!Icon) throw new Error("An Icon is required");
+
     return (
         <a href={to}>
-            {Icon && <Icon className={className} />}
+            <Icon className={`hero__icon ${className}`}/>
         </a>
     )
 }
