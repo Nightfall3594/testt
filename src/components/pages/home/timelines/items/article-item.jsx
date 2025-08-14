@@ -1,9 +1,9 @@
 import {Journal} from "../../../../common/icons/index.js";
 import {Link} from "react-router-dom"
 
-function ArticleItem({className="", to, articleName}) {
+function ArticleItem({to, articleName}) {
     return (
-        <li className={"timeline-2__item timeline-2__article " + className}>
+        <li className={"timeline-2__item timeline-2__article"}>
 
             <Journal className="timeline-2__icon"/>
 

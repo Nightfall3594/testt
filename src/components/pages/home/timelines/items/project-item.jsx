@@ -1,9 +1,9 @@
 import {Project} from "../../../../common/icons/index.js";
 import {Link} from "react-router-dom"
 
-function ProjectItem({className, to, projectName}) {
+function ProjectItem({to, projectName}) {
    return (
-       <li className={"timeline-2__item timeline-2__project" + className}>
+       <li className={"timeline-2__item timeline-2__project"}>
 
            <Project className="timeline-2__icon"/>
 

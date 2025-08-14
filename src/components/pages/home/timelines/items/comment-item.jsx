@@ -1,8 +1,8 @@
 import {Message} from "../../../../common/icons/index.js";
 
-function CommentItem({className="", children}) {
+function CommentItem({children}) {
     return (
-        <li className={"timeline-2__item timeline-2__comment" + className}>
+        <li className={"timeline-2__item timeline-2__comment"}>
 
             <Message className="timeline-2__icon"/>
 
