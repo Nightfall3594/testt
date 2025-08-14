@@ -2,7 +2,7 @@ import {Message} from "../../../../common/icons/index.js";
 
 function CommentItem({children}) {
     return (
-        <li className={"timeline-2__item timeline-2__comment"}>
+        <li className={"timeline-2__comment"}>
 
             <Message className="timeline-2__icon"/>
 

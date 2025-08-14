@@ -2,7 +2,7 @@ import {Thought} from "../../../../common/icons/index.js";
 
 function ThoughtItem({children}) {
     return (
-        <li className={"timeline-2__item timeline-2__thoughts"}>
+        <li className={"timeline-2__thoughts"}>
             <Thought className="timeline-2__icon"/>
 
             <img src="/images/pfp.jpg" alt="Nightfall3594"/>
