@@ -6,7 +6,13 @@ function LikeItem({to, articleName}){
         <li className={"timeline-2__like "}>
             <Heart className="timeline-2__icon"/>
             <span className="timeline-2-item__content">
-                <span>Liked the article:</span> <Link to={to}>{articleName}</Link>
+                <span>Liked the article:</span>
+                <Link
+                    to={to}
+                    className="underline-on-hover"
+                >
+                    {articleName}
+                </Link>
             </span>
         </li>
     )

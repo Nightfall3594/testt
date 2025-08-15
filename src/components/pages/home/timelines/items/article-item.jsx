@@ -8,7 +8,13 @@ function ArticleItem({to, articleName}) {
             <Journal className="timeline-2__icon"/>
 
             <span className="timeline-2-item__content">
-                <span>Wrote:</span> <Link to={to}>{articleName}</Link>
+                <span>Wrote:</span>
+                <Link
+                    to={to}
+                    className="underline-on-hover"
+                >
+                    {articleName}
+                </Link>
             </span>
         </li>
     )

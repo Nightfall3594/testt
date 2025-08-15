@@ -8,7 +8,13 @@ function ProjectItem({to, projectName}) {
            <Project className="timeline-2__icon"/>
 
            <span className="timeline-2-item__content">
-               <span>Added a new project:</span> <Link to={to}>{projectName}</Link>
+               <span>Added a new project:</span>
+               <Link
+                   to={to}
+                   className="underline-on-hover"
+               >
+                   {projectName}
+               </Link>
            </span>
        </li>
    )

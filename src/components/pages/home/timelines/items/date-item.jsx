@@ -4,7 +4,7 @@ function DateItem({children, time, to}){
     return (
         <li>
             <Link to={to}>
-                <span>{children}</span>
+                <span className="underline-on-hover">{children}</span>
                 <span className="timeline__date">{time}</span>
             </Link>
         </li>
