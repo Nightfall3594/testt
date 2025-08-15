@@ -1,11 +1,11 @@
 import './timelines.css'
 
 import DateItem from './items/date-item.jsx'
-import * as Icons from "../../../common/icons/index.js";
 import Timeline from "./timeline.jsx";
 import * as Items from './index.js'
 
 import {motion} from "framer-motion";
+import ReadMore from "./read-more.jsx";
 
 const timelineContainerVariants = {
     initial: {opacity: 0, y: "20%"},
@@ -57,10 +57,7 @@ function Timelines() {
 
                     </Timeline>
 
-                    <a href="#" className="timeline-1__see-more">
-                        <Icons.ArrowCircle />
-                        <span> Read more</span>
-                    </a>
+                    <ReadMore to={"/journal"}/>
 
                     <hr/>
 
@@ -71,10 +68,8 @@ function Timelines() {
                         </DateItem>
                     </Timeline>
 
-                    <a href="#" className="timeline-1__see-more">
-                        <Icons.ArrowCircle/>
-                        <span>Read more</span>
-                    </a>
+                    <ReadMore to={"/projects"}/>
+
                 </motion.div>
 
                 <motion.div

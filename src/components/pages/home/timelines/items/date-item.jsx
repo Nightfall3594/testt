@@ -1,11 +1,12 @@
+import {Link} from "react-router-dom";
 
 function DateItem({children, time, to}){
     return (
         <li>
-            <a href={to}>
+            <Link to={to}>
                 <span>{children}</span>
                 <span className="timeline__date">{time}</span>
-            </a>
+            </Link>
         </li>
     )
 }
