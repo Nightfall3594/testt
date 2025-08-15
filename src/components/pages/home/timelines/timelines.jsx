@@ -3,15 +3,35 @@ import './timelines.css'
 import DateItem from './items/date-item.jsx'
 import * as Icons from "../../../common/icons/index.js";
 import Timeline from "./timeline.jsx";
-
 import * as Items from './index.js'
+
+import {motion} from "framer-motion";
+
+const timelineContainerVariants = {
+    initial: {opacity: 0, y: "20%"},
+    animate: {
+        opacity: 1,
+        y: "0%",
+        transition: {
+            duration: 0.75,
+        }
+    },
+}
 
 function Timelines() {
 
     return(
         <>
-            <section className="timelines">
-                <div className="timeline-1__container">
+            <motion.section
+                className="timelines"
+            >
+                <motion.div
+                    className="timeline-1__container"
+                    variants={timelineContainerVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{once: true}}
+                >
 
                     {/* First Timeline of Timeline-1 Section */}
                     <Timeline className="timeline-1" title="Recently Updated Notes">
@@ -55,9 +75,15 @@ function Timelines() {
                         <Icons.ArrowCircle/>
                         <span>Read more</span>
                     </a>
-                </div>
+                </motion.div>
 
-                <div className="timeline-2__container">
+                <motion.div
+                    className="timeline-2__container"
+                    variants={timelineContainerVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{once: true}}
+                >
                     <Timeline title="Recent Updates" className="timeline-2__timeline">
 
                         <Items.LikeItem to="#" articleName="Article Name here!"/>
@@ -93,8 +119,8 @@ function Timelines() {
                         </Items.CommentItem>
 
                     </Timeline>
-                </div>
-            </section>
+                </motion.div>
+            </motion.section>
         </>
     )
 }
