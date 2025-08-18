@@ -6,6 +6,29 @@ import IconButton from "./icon-button.jsx";
 import CommentBox from "./comment-box.jsx"
 import {useState} from "react";
 
+import {motion} from "framer-motion";
+
+
+const variants= {
+    hidden: {},
+    show: {
+        transition: {
+            staggerChildren: 0.2
+        }
+    }
+}
+
+const h1Variants = {
+    hidden: {opacity: 0, y: 30},
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.25
+        }
+    }
+}
+
 
 function BottomNav({className=""}) {
 
@@ -14,9 +37,23 @@ function BottomNav({className=""}) {
     return (
         <section className={"bottom-nav " + className}>
 
-            <h1 className="bottom-nav__title">Why don't you take a look?</h1>
+            <motion.h1
+                className="bottom-nav__title"
+                variants={h1Variants}
+                initial="hidden"
+                whileInView="show"
+                viewport={{once: true}}
+            >
+                Why don't you take a look?
+            </motion.h1>
 
-            <ul className="bottom-nav__list">
+            <motion.ul
+                className="bottom-nav__list"
+                variants={variants}
+                initial="hidden"
+                whileInView="show"
+                viewport={{once: true}}
+            >
                 <BottomNavItem
                     to="/journal"
                     Icon={Icons.Journal}
@@ -40,7 +77,7 @@ function BottomNav({className=""}) {
                     Icon={Icons.Other}
                     text="About the site"
                 />
-            </ul>
+            </motion.ul>
 
             <div className="bottom-nav__buttons">
                 <IconButton
