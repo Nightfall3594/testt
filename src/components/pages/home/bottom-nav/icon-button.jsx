@@ -1,9 +1,12 @@
 
-function IconButton ({className="", Icon, children, onClick}) {
+function IconButton ({className="", Icon, text, onClick}) {
     return (
-        <button className={className} onClick={onClick || (() => {})}>
+        <button
+            className={"bottom-nav__button " + className}
+            onClick={onClick || (() => {})}
+        >
             {Icon && <Icon/>}
-            <span>{children}</span>
+            <span>{text}</span>
         </button>
     )
 }

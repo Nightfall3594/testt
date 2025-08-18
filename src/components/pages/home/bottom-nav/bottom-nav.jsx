@@ -35,17 +35,18 @@ function BottomNav({className=""}) {
             </ul>
 
             <div className="bottom-nav__buttons">
-                <IconButton className="bottom-nav__button bottom-nav__like" Icon={Icons.HeartFilled}>
-                    Like this page
-                </IconButton>
+                <IconButton
+                    className="bottom-nav__like"
+                    Icon={Icons.HeartFilled}
+                    text="Like this page"
+                />
 
                 <IconButton
-                    className="bottom-nav__button bottom-nav__comment"
+                    className="bottom-nav__comment"
                     Icon={Icons.MessageFilled}
                     onClick={() =>{setCommentBoxVisible(true)}}
-                >
-                    Leave a message
-                </IconButton>
+                    text="Leave a message"
+                />
             </div>
 
             <CommentBox isVisible={isCommentBoxVisible} onClose={() => setCommentBoxVisible(false)} />
