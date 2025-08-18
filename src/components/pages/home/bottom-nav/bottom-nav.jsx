@@ -9,7 +9,7 @@ import {useState} from "react";
 import {motion} from "framer-motion";
 
 
-const variants= {
+const bottomNavVariants= {
     hidden: {},
     show: {
         transition: {
@@ -25,6 +25,15 @@ const h1Variants = {
         y: 0,
         transition: {
             duration: 0.25
+        }
+    }
+}
+
+const buttonListVariants= {
+    initial: {},
+    animate: {
+        transition: {
+            staggerChildren: 0.2
         }
     }
 }
@@ -49,7 +58,7 @@ function BottomNav({className=""}) {
 
             <motion.ul
                 className="bottom-nav__list"
-                variants={variants}
+                variants={bottomNavVariants}
                 initial="hidden"
                 whileInView="show"
                 viewport={{once: true}}
@@ -79,7 +88,13 @@ function BottomNav({className=""}) {
                 />
             </motion.ul>
 
-            <div className="bottom-nav__buttons">
+            <motion.div
+                className="bottom-nav__buttons"
+                variants={buttonListVariants}
+                initial="initial"
+                whileInView="animate"
+                viewport={{once: true}}
+            >
                 <IconButton
                     className="bottom-nav__like"
                     Icon={Icons.HeartFilled}
@@ -92,7 +107,7 @@ function BottomNav({className=""}) {
                     onClick={() =>{setCommentBoxVisible(true)}}
                     text="Leave a message"
                 />
-            </div>
+            </motion.div>
 
             <CommentBox isVisible={isCommentBoxVisible} onClose={() => setCommentBoxVisible(false)} />
         </section>
