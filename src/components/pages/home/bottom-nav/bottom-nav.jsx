@@ -17,21 +17,29 @@ function BottomNav({className=""}) {
             <h1 className="bottom-nav__title">Why don't you take a look?</h1>
 
             <ul className="bottom-nav__list">
-                <BottomNavItem to="/journal" Icon={Icons.Journal}>
-                    What I've been writing
-                </BottomNavItem>
+                <BottomNavItem
+                    to="/journal"
+                    Icon={Icons.Journal}
+                    text="What I've been writing"
+                />
 
-                <BottomNavItem to="/thoughts" Icon={Icons.Thought}>
-                    What I've been up to
-                </BottomNavItem>
+                <BottomNavItem
+                    to="/thoughts"
+                    Icon={Icons.Thought}
+                    text="What I've been up to"
+                />
 
-                <BottomNavItem to="/projects" Icon={Icons.Project}>
-                    What I'm working on
-                </BottomNavItem>
+                <BottomNavItem
+                    to="/projects"
+                    Icon={Icons.Project}
+                    text="What I'm working on"
+                />
 
-                <BottomNavItem to="/other" Icon={Icons.Other}>
-                    About the site
-                </BottomNavItem>
+                <BottomNavItem
+                    to="/other"
+                    Icon={Icons.Other}
+                    text="About the site"
+                />
             </ul>
 
             <div className="bottom-nav__buttons">

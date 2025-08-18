@@ -1,11 +1,11 @@
 import {Link} from 'react-router-dom';
 
-function BottomNavItem({className="", to="#", children, Icon}) {
+function BottomNavItem({to="#", text, Icon}) {
     return (
-        <li className={className}>
+        <li>
             <Link to={to}>
                 {Icon && <Icon/>}
-                <span>{children}</span>
+                <span>{text}</span>
             </Link>
         </li>
     )
