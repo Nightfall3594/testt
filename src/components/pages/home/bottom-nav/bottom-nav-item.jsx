@@ -12,12 +12,15 @@ const variants = {
         transition: {
             type: "easeOut"
         }
-    }
+    },
 }
-
 function BottomNavItem({to="#", text, Icon}) {
     return (
-        <motion.li variants={variants}>
+        <motion.li
+            variants={variants}
+            // Note: whileHover is in-line to be independent with the parent's propagated styles.
+            whileHover={{y: -5, transition: {duration: 0.25}}}
+        >
             <Link to={to}>
                 {Icon && <Icon/>}
                 <span>{text}</span>
