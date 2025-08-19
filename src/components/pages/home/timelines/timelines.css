@@ -158,27 +158,6 @@
     text-decoration: none;
 }
 
-.underline-on-hover {
-    position: relative;
-}
-
-.underline-on-hover:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: white;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.25s;
-}
-
-.underline-on-hover:hover:after {
-    transform: scaleX(1);
-}
-
 /* Empty for now, but when specific styles are needed, they can be added here */
 .timeline-2__like {}
 .timeline-2__project {}

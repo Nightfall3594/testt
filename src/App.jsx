@@ -1,5 +1,6 @@
 import './styles/colors.css'
 import './styles/defaults.css'
+import './styles/utilities.css'
 
 import Navbar from "./components/common/navbar/navbar.jsx";
 import Footer from "./components/common/footer/footer.jsx"
