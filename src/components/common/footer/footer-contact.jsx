@@ -2,7 +2,7 @@
 function FooterContact({to="#", content=""}){
     return (
         <li>
-            <a href={to}>{content}</a>
+            <a className="underline-on-hover" href={to}>{content}</a>
         </li>
     )
 }
