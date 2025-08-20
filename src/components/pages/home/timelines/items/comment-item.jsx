@@ -1,4 +1,4 @@
-import {Message} from "../../../../common/icons/index.js";
+import {Message} from "src/components/common/icons/index.js";
 
 function CommentItem({children}) {
     return (

@@ -1,4 +1,4 @@
-import {Heart} from "../../../../common/icons/index.js";
+import {Heart} from "src/components/common/icons/index.js";
 import {Link} from "react-router-dom"
 
 function LikeItem({to, articleName}){

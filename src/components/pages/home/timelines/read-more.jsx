@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import * as Icons from "../../../common/icons/index.js";
+import * as Icons from "src/components/common/icons/index.js";
 
 export default function ReadMore({to}) {
     return (

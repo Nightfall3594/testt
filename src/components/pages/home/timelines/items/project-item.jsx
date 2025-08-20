@@ -1,4 +1,4 @@
-import {Project} from "../../../../common/icons/index.js";
+import {Project} from "src/components/common/icons/index.js";
 import {Link} from "react-router-dom"
 
 function ProjectItem({to, projectName}) {

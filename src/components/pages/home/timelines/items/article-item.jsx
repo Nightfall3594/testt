@@ -1,4 +1,4 @@
-import {Journal} from "../../../../common/icons/index.js";
+import {Journal} from "src/components/common/icons/index.js";
 import {Link} from "react-router-dom"
 
 function ArticleItem({to, articleName}) {

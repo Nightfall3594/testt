@@ -1,6 +1,6 @@
 import './hero.css'
 
-import {Mail, Discord, Github, SubtleScroll} from "../../../common/icons/index.js";
+import {Mail, Discord, Github, SubtleScroll} from "src/components/common/icons/index.js";
 import HeroLink from "./hero-link.jsx";
 import HeroText from "./hero-text.jsx";
 import MutedHeroText from "./muted-hero-text.jsx";

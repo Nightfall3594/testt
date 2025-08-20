@@ -1,6 +1,6 @@
 import './bottom-nav.css'
 
-import * as Icons from "../../../common/icons/index.js";
+import * as Icons from "/src/components/common/icons/index.js";
 import {default as BottomNavItem} from "./bottom-nav-item.jsx"
 import IconButton from "./icon-button.jsx";
 import CommentBox from "./comment-box.jsx"

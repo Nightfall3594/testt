@@ -1,4 +1,4 @@
-import {Thought} from "../../../../common/icons/index.js";
+import {Thought} from "src/components/common/icons/index.js";
 
 function ThoughtItem({children}) {
     return (
