@@ -1,0 +1,15 @@
+{
+  "release-type": "simple",
+  "packages": {
+    ".": {
+      "package-name": "nightfall-is-a-dev",
+      "release-type": "node",
+      "changelog-sections": [
+        { "type": "feat", "section": "\uD83D\uDE80 Features", "hidden": false },
+        { "type": "fix", "section": "\uD83D\uDC1B Bug Fixes", "hidden": false },
+        { "type": "docs", "section": "\uD83D\uDCD5 Documentation", "hidden": false },
+        { "type": "chore", "section": "\uD83C\uDF1F Miscellaneous Tasks", "hidden": true }
+      ]
+    }
+  }
+}
