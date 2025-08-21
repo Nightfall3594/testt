@@ -1,0 +1,58 @@
+# Changelog
+
+## 1.0.0 (2025-08-21)
+
+
+### Features
+
+* add navbar and rudimentary hero section ([81da37b](https://github.com/Nightfall3594/testt/commit/81da37b6f36b1af1ea13dbdd3242740ec5146f64))
+* add navbar. Animations later on ([2ad26c4](https://github.com/Nightfall3594/testt/commit/2ad26c42fb41d4cf466db7f1b9c0aec33995630a))
+* **bottom-nav:** add animations for bottom nav links when hovered ([fe4f84a](https://github.com/Nightfall3594/testt/commit/fe4f84aa8b2246a3c12bad1de4b5a83347116529))
+* **bottom-nav:** add bottom nav section and implement responsiveness ([d3c9649](https://github.com/Nightfall3594/testt/commit/d3c964980cd4b9025080973b9132d62b7f5b0bf6))
+* **bottom-nav:** add bottom-nav buttons ([5913f13](https://github.com/Nightfall3594/testt/commit/5913f133ad9e4587159badb777c3ef84a9bd9b7d))
+* **bottom-nav:** add entry animations for navlinks ([fcc1180](https://github.com/Nightfall3594/testt/commit/fcc118043863379bc4c1e54577ee9b61a65427a6))
+* **bottom-nav:** add fade in animations for comment box ([3374a79](https://github.com/Nightfall3594/testt/commit/3374a793c122950b6f8680c89d8e0afb431dcf08))
+* **bottom-nav:** add hover and fade in animations for bottom nav buttons ([46dfa32](https://github.com/Nightfall3594/testt/commit/46dfa3210933ad1cf8d5fed008e721bf7ef6bc98))
+* **bottom-nav:** add leave a message input form ([bfe1dd9](https://github.com/Nightfall3594/testt/commit/bfe1dd91a9990793db18ab119640df4e6273e9ac))
+* **footer:** add footer and remove :root color comments ([c062dd2](https://github.com/Nightfall3594/testt/commit/c062dd229846d8248adfb0a09fb2530180a421c9))
+* **footer:** add responsiveness ([dc3260c](https://github.com/Nightfall3594/testt/commit/dc3260cd6751ff944dbe4967916f5f5a819b60c2))
+* **footer:** add underline on hover for footer contact items ([bd106a5](https://github.com/Nightfall3594/testt/commit/bd106a5ae720bd9d5917ad832a635043cefadd59))
+* **hero:** add animations to hero link icons ([746838e](https://github.com/Nightfall3594/testt/commit/746838e5618579ae8ad9fc4b39028f41155c73d3))
+* **hero:** add fade in animation for hero image ([5359059](https://github.com/Nightfall3594/testt/commit/5359059b3fb6d3ba5a017551feeeb58f0bd6e001))
+* **hero:** add fade in animations for hero text ([7f08966](https://github.com/Nightfall3594/testt/commit/7f08966488174f5157cf23147b5b8d570cff30c0))
+* **hero:** add hero section. ([2546ce0](https://github.com/Nightfall3594/testt/commit/2546ce069d028e8d797475269202afbe3a267f04))
+* **hero:** add hover effect for hero links ([8ecfa81](https://github.com/Nightfall3594/testt/commit/8ecfa81dc34488bda2cc7f213cb89d61703d3cc1))
+* **hero:** add mobile hero layout ([1bc7358](https://github.com/Nightfall3594/testt/commit/1bc73589df5747b347281cf7e9496303291fd827))
+* **hero:** add vertical responsiveness ([68076b1](https://github.com/Nightfall3594/testt/commit/68076b11670cb2b589671917970d2f5cc34f3202))
+* **hero:** finishing touches and minor tweaks ([568d2bb](https://github.com/Nightfall3594/testt/commit/568d2bb3fee4a550ca6759c5c1053cce7aface85))
+* **hero:** resize subtle scroll icon and add bobbing animation ([dda5603](https://github.com/Nightfall3594/testt/commit/dda5603242c656cb8a9ab5599c4dcbae0dc9650f))
+* **navbar:** add animated visuals for the navbar ([ed2b3f9](https://github.com/Nightfall3594/testt/commit/ed2b3f99f838714ad2bdd4a2df3c898b4b1a822c))
+* **navbar:** add frosted glass effect when scrolling ([ed2b3f9](https://github.com/Nightfall3594/testt/commit/ed2b3f99f838714ad2bdd4a2df3c898b4b1a822c))
+* **navbar:** add hamburger button toggle and exit (WIP: animations in the future) ([638bb46](https://github.com/Nightfall3594/testt/commit/638bb46a9b441ccabe30561d8ae5fa6563428169))
+* **navbar:** add icons to bottom navbar ([3d695b5](https://github.com/Nightfall3594/testt/commit/3d695b5fd6eb7f2580657cf66237894de29eeedc))
+* **navbar:** add responsive navbar menu items for mobile layout ([e82fe09](https://github.com/Nightfall3594/testt/commit/e82fe09118f037100f90ee3a41dc6e92233fc694))
+* **navbar:** add sliding animations for mobile nav links ([ed2b3f9](https://github.com/Nightfall3594/testt/commit/ed2b3f99f838714ad2bdd4a2df3c898b4b1a822c))
+* **navbar:** completed basic responsive design. WIP: Navlink layout for ([24016ff](https://github.com/Nightfall3594/testt/commit/24016ff7f9d65fa257e583d58e0c06e54ec4d5dd))
+* **navbar:** make desktop navbar glow when hovered ([ed2b3f9](https://github.com/Nightfall3594/testt/commit/ed2b3f99f838714ad2bdd4a2df3c898b4b1a822c))
+* **navbar:** make navbar sticky and add backgrounds for nav icons ([ed2b3f9](https://github.com/Nightfall3594/testt/commit/ed2b3f99f838714ad2bdd4a2df3c898b4b1a822c))
+* **timeline-1:** add first timeline subsection ([28a6a50](https://github.com/Nightfall3594/testt/commit/28a6a50a52e0ecb68e0c38443d3948ff36cf3714))
+* **timeline-2:** add vertical scroll and implement responsiveness ([40ec7fb](https://github.com/Nightfall3594/testt/commit/40ec7fb978f76088d28f390e47f305b69d4831de))
+* **timeline-2:** implemented timeline-2 subsection ([d8d2449](https://github.com/Nightfall3594/testt/commit/d8d2449a91df402ed4a57ae28eac18672371a64f))
+* **timelines:** add fade in animation for timelines section ([7eabe80](https://github.com/Nightfall3594/testt/commit/7eabe80b106e857a96a614355fa18a17eeee16f2))
+* **timelines:** add underline animation for all timeline item links ([34ca98f](https://github.com/Nightfall3594/testt/commit/34ca98fe5ae6ea894b49a8b8f2f91330c86c746a))
+
+
+### Bug Fixes
+
+* **bottom-nav:** misaligned icon and text ([58362a6](https://github.com/Nightfall3594/testt/commit/58362a641e6181ecd1258787ef2a640407923b3f))
+* fixed non-disappearing mobile nav on resize and handled resizing edge cases ([c01bc51](https://github.com/Nightfall3594/testt/commit/c01bc51a81fc5ccd4b0a00452fc7ddad06620322))
+* horizontal scroll on small mobile screens ([48f56e5](https://github.com/Nightfall3594/testt/commit/48f56e5b704ff76bfb2c496c5586a078d5537dd7))
+* **navbar:** adjust icon alignment and add hover effect ([58b3acc](https://github.com/Nightfall3594/testt/commit/58b3acc18a5b041e571aa86b768e2ef8f911f2a5))
+* **navbar:** disappearing navbar issue on desktop ([1a14518](https://github.com/Nightfall3594/testt/commit/1a14518f93caab67a50994f54a4dfa855d947592))
+* **navbar:** disappearing navbar issue on desktop ([3d81b82](https://github.com/Nightfall3594/testt/commit/3d81b823e6dee56d44b83e5abf16d841167573ef))
+* **navbar:** hidden navbar issue on screensize change ([41613c6](https://github.com/Nightfall3594/testt/commit/41613c63b1e20e5bee20dc94fd9849873533598c))
+* remove overscrolling behavior ([90656f1](https://github.com/Nightfall3594/testt/commit/90656f1f812f9debf9bc222111d3909c3a4db71b))
+* **timeline-2:** horizontal scroll issue ([ad8223c](https://github.com/Nightfall3594/testt/commit/ad8223c1b139564f99cba5c1fd8a1023d3a79cab))
+* **timeline-2:** shrinking icon issue ([14f3767](https://github.com/Nightfall3594/testt/commit/14f3767f8d79192c66427c2b56854289f81beb5f))
+* **timeline-2:** timeline dot clipping issue ([c848fac](https://github.com/Nightfall3594/testt/commit/c848faca85988dacb2e13e87e7e940e4d51b1fd0))
+* **timelines:** missing font links, unnecessary horizontal scroll and underline ([00d7de8](https://github.com/Nightfall3594/testt/commit/00d7de81c7efb598c21ff91ec52dd8d48273e1b0))
