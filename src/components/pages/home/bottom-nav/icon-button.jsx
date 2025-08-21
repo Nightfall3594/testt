@@ -1,10 +1,27 @@
+import {motion} from "framer-motion";
 
-function IconButton ({className="", Icon, children, onClick}) {
+const buttonVariants = {
+    initial: {
+        opacity: 0,
+        y: 10
+    },
+    animate: {
+        opacity: 1,
+        y: 0
+    }
+}
+
+function IconButton ({className="", Icon, text, onClick}) {
     return (
-        <button className={className} onClick={onClick || (() => {})}>
+        <motion.button
+            className={"bottom-nav__button " + className}
+            onClick={onClick || (() => {})}
+            variants={buttonVariants}
+            whileHover={{scale: 1.08}}
+        >
             {Icon && <Icon/>}
-            <span>{children}</span>
-        </button>
+            <span>{text}</span>
+        </motion.button>
     )
 }
 

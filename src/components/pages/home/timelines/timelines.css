@@ -146,17 +146,14 @@
     align-items: center;
 }
 
-.timeline-2-item__content{
+.timeline-2-item__content span{
     color: var(--text);
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
-    margin-right: 0.5rem;
+    margin-right: 0.25rem;
 }
 
-/* Timeline-2 item styles */
-.timeline-2__item {}
-
-.timeline-2__item a {
+.timeline-2-item__content a {
     font-size: 16px;
     text-decoration: none;
 }
@@ -169,11 +166,14 @@
 .timeline-2__comment {}
 
 .timeline-2__thoughts .timeline-2-item__content,
-.timeline-2__comment .timeline-2-item__content{
+.timeline-2__comment .timeline-2-item__content {
     font-size: 15px;
     padding: 0.75rem;
     background-color: var(--lighter-bg);
-    border-radius: 0 14px 14px 14px
+    border-radius: 0 14px 14px 14px;
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 0.5rem;
 }
 
 .timeline-2__thoughts img {

@@ -1,74 +1,94 @@
 import './navbar.css'
 
-import NavItem from './navitem.jsx'
-import NavLinks from "./navlinks.jsx";
+import NavItem from './navitems/navitem.jsx'
+import NavLinks from "./navlinks/navlinks.jsx";
 import * as Icons from '../icons/index.js'
 import Overlay from "../overlays/overlay.jsx";
+import {NavContext} from "./navContext.js";
 
 import {useEffect, useState} from "react";
+import {motion} from "framer-motion";
+import NavbarBackdrop from "./navlinks/navbar-backdrop.jsx";
+import NavButton from "./navbutton.jsx";
 
+const navbarVariants={
+    default: {
+        borderBottomWidth: 0,
+        borderBottomColor: 'rgba(0, 0, 0, 0)',
+        borderBottomStyle: 'solid',
+    },
+
+    frosted: {
+        borderBottomWidth: 1,
+        borderBottomColor: 'rgba(255,255,255,1)',
+        borderBottomStyle: 'solid',
+    }
+}
 
 function NavBar() {
 
-    const [isOverlayVisible, setOverlayVisible] = useState(false);
-    const [isNavLinkVisible, setNavLinkVisible] = useState(false);
+    const [isMobileNavVisible, setMobileNavVisible] = useState(false);
+    const [isMobile, setMobile] = useState(window.innerWidth <= 768);
+    const [isFrosted, setFrosted] = useState(false);
 
-    let hideNav = () => {
-        setOverlayVisible(false);
-        setNavLinkVisible(false);
-    }
-
-    let showNav = () => {
-        setOverlayVisible(true);
-        setNavLinkVisible(true);
-    }
-
-    /* These functions are for responsive behavior on the JS side of things. */
-    let handleResize = () =>
-    {
-        if (window.innerWidth > 768) {
-            hideNav();
+    useEffect( () => {
+        function handleResize(){
+            const isNavMobile = window.innerWidth <= 768;
+            setMobile(isNavMobile);
+            if(!isNavMobile) setMobileNavVisible(false);
         }
-    }
 
-    useEffect( () =>
-    {
+        function handleScroll() {
+            setFrosted(window.scrollY > 60);
+        }
+
         window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    })
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+            window.removeEventListener('scroll', handleScroll);
+        };
+    },[]);
 
 
     return (
-        <>
+        <motion.header
+            className="navbar"
+            variants={navbarVariants}
+            initial="default"
+            animate={isFrosted ? "frosted" : "default"}
+        >
+
             <Overlay
                 className="navbar__overlay"
-                 onClick={hideNav}
-                 isVisible={isOverlayVisible}
+                onClick={() => setMobileNavVisible(false)}
+                isVisible={isMobileNavVisible}
             />
 
-            <header className="navbar">
-                <button
-                    className="navbar__icon hamburger-menu"
-                    onClick={showNav}
-                >
-                    <Icons.Hamburger className="navbar__icon"/>
-                </button>
+            <NavButton Icon={Icons.Hamburger} className="hamburger-menu" onClick={() => setMobileNavVisible(true)} />
 
-                <img src="/images/pfp.jpg" alt="profile picture" className="navbar__profile-image"/>
+            <img src="/images/pfp.jpg" alt="profile picture" className="navbar__profile-image"/>
 
-                <NavLinks isVisible={isNavLinkVisible}>
-                    <NavItem to="/" Icon={Icons.Home} onClick={hideNav}>Home</NavItem>
-                    <NavItem to="/journal" Icon={Icons.Journal} onClick={hideNav}>Journal</NavItem>
-                    <NavItem to="/thoughts" Icon={Icons.Thought} onClick={hideNav}>Thoughts</NavItem>
-                    <NavItem to="/projects" Icon={Icons.Project} onClick={hideNav}>Projects</NavItem>
-                    <NavItem to="/other" Icon={Icons.Other} onClick={hideNav}>Other</NavItem>
+            <NavContext.Provider value={{
+                isVisible: isMobileNavVisible,
+                handleClick: () => setMobileNavVisible(false),
+                isMobile: isMobile
+            }}>
+                <NavLinks>
+                    <NavItem to="/" Icon={Icons.Home}>Home</NavItem>
+                    <NavItem to="/journal" Icon={Icons.Journal}>Journal</NavItem>
+                    <NavItem to="/thoughts" Icon={Icons.Thought}>Thoughts</NavItem>
+                    <NavItem to="/projects" Icon={Icons.Project}>Projects</NavItem>
+                    <NavItem to="/other" Icon={Icons.Other}>Other</NavItem>
                 </NavLinks>
+            </NavContext.Provider>
 
-                <button className="navbar__icon contact-button">
-                    <Icons.Mail/>
-                </button>
-            </header>
-        </>
+            <NavButton Icon={Icons.Mail} className="navbar__icon" onClick={() => {}} />
+
+            <NavbarBackdrop isVisible={isFrosted}/>
+
+        </motion.header>
     )
 }
 

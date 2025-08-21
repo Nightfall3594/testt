@@ -1,0 +1,26 @@
+
+.underline-on-hover {
+    position: relative;
+}
+
+.underline-on-hover:after {
+    overflow: visible;
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s;
+
+    /* Turns out, 1 pixel cannot be rounded consistently */
+    /* relegates computation to gpu to prevent artifacting */
+    will-change: transform;
+}
+
+.underline-on-hover:hover:after {
+    transform: scaleX(1);
+}

@@ -1,26 +1,64 @@
 import './hero.css'
 
-import {Mail, Discord, Github, SubtleScroll} from "../../../common/icons/index.js";
+import {Mail, Discord, Github, SubtleScroll} from "src/components/common/icons/index.js";
 import HeroLink from "./hero-link.jsx";
 import HeroText from "./hero-text.jsx";
+import MutedHeroText from "./muted-hero-text.jsx";
+
+import {motion} from "framer-motion";
+
+const heroTextContainerVariants = {
+    initial: {opacity: 0},
+    animate: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.75
+        }
+    }
+}
+
+const heroLinkContainerVariants = {
+    initial: {opacity: 0},
+    animate: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+}
 
 function Hero() {
     return (
         <section className="hero">
             <div className="hero__container">
-                <div className="hero__text-container">
+                <motion.div
+                    className="hero__text-container"
+                    variants={heroTextContainerVariants}
+                    initial="initial"
+                    animate="animate"
+                >
+                    <HeroText>Hi! I'm Nightfall 👋</HeroText>
+                    <HeroText>I'm a <span>&lt;Python Developer/&gt;</span></HeroText>
+                    <MutedHeroText>I like to code because I like building stuff</MutedHeroText>
 
-                    <HeroText/>
+                    <motion.div
+                        className="hero__links"
+                        variants={heroLinkContainerVariants}
+                    >
+                        <HeroLink Icon={Github} className="github-icon" to="#"/>
+                        <HeroLink Icon={Mail} className="mail-icon" to="#"/>
+                        <HeroLink Icon={Discord} className="discord-icon" to="#"/>
+                    </motion.div>
 
-                    <div className="hero__links">
-                        <HeroLink Icon={Github} className="hero__icon github-icon" to="#"/>
-                        <HeroLink Icon={Mail} className="hero__icon mail-icon" to="#"/>
-                        <HeroLink Icon={Discord} className="hero__icon discord-icon" to="#"/>
-                    </div>
+                </motion.div>
 
-                </div>
-
-                <img src="/images/pfp.jpg" className="hero__image " alt="hero image"/>
+                <motion.img
+                    src="/images/pfp.jpg"
+                    className="hero__image"
+                    alt="hero image"
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1, transition: {duration: 1}}}
+                />
 
             </div>
 

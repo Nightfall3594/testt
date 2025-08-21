@@ -1,20 +1,33 @@
 
-/*
-This file contains the styles for the navbar component, including both mobile and desktop styles.
-It's not recommended to link this file directly in the HTML, and it should be imported into the main CSS instead.
- */
-
 /* navbar section */
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+/**
+Frosted glass backdrop/background
+component used over simple backdrop filter on parent
+due to backdrop filter interfering with the mobile navlink's positioning
+ */
+.navbar__backdrop {
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(120, 120, 120, 0.2);
+    backdrop-filter: blur(20px);
+    z-index: -1;
 }
 
 .navbar__profile-image {
-    width: 2em;
-    height: 2em;
-    padding: 20px 0;
+    width: 2.5em;
+    height: 2.5em;
+    padding: 15px 0;
     border-radius: 35%;
 }
 
@@ -38,16 +51,14 @@ It's not recommended to link this file directly in the HTML, and it should be im
     bottom: 0;
     width: 100%;
     margin: 0 auto;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--bg);
     padding: 1.25rem 0 2rem 0;
     z-index: 101;
-}
-
-.navbar__links--visible {
-    display: flex !important;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
 }
 
 .navbar__links ul {
@@ -57,6 +68,10 @@ It's not recommended to link this file directly in the HTML, and it should be im
 
 .navbar__links li {
     width: 100%;
+}
+
+.navbar__underline {
+    display: none;
 }
 
 .navbar__links a {
@@ -94,9 +109,11 @@ It's not recommended to link this file directly in the HTML, and it should be im
     width: 16px;
     height: 16px;
     color: var(--text);
-    padding: 0.35rem;
+    padding: 0.5rem;
     border-radius: 100%;
     border: 1px solid var(--border);
+
+    background: var(--bg);
 }
 
 .navbar__icon a {
@@ -105,37 +122,38 @@ It's not recommended to link this file directly in the HTML, and it should be im
     font-family: 'JetBrains Mono Thin', sans-serif;
 }
 
+.navbar__overlay {
+    z-index: 101;
+}
+
 /* Desktop styles */
 
 @media (min-width: 768px) {
-
-    /* Resetting mobile styles */
-    .navbar__links {
-        display: flex;
-    }
 
     .navbar__links ul::before {
         display: none;
     }
 
     .navbar__links svg {
-        display: none;
+        opacity: 0;
+        position: absolute;
     }
 
     .navbar__link--active svg {
-        display: block;
+        opacity: 1;
+        position: static;
     }
 
     .navbar__links span{
         text-align: left;
     }
 
-    .navbar__links a:hover{
-        background-color: transparent;
+    .navbar__links span:hover {
+        color: var(--primary);
     }
 
-    .overlay {
-        display: none;
+    .navbar__links a:hover{
+        background-color: transparent;
     }
 
     .hamburger-menu {
@@ -143,15 +161,17 @@ It's not recommended to link this file directly in the HTML, and it should be im
     }
 
     .navbar__links {
+
         /* Style reset */
-        position: static;
         left: auto;
         bottom: auto;
         width: auto;
         margin: initial;
-        background-color: initial;
 
         /* Actual desktop styles */
+        background-color: var(--bg);
+        position: relative;
+        overflow: hidden;
         display: flex;
         justify-content: space-around;
         border: 1px solid var(--border);
@@ -168,14 +188,27 @@ It's not recommended to link this file directly in the HTML, and it should be im
         list-style: none;
         display: flex;
         justify-content: space-between;
+        z-index: 100;
     }
 
     .navbar__links li {
-        padding: 0.35rem 0.75rem;
+        padding: 0.65rem 0.75rem;
+        position: relative;
+        z-index: 100;
+    }
+
+    .navbar__underline {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(to right, transparent 0%, var(--primary) 40%, var(--primary) 60%, transparent);
     }
 
     .navbar__links a {
-        font-size: 14px;
+        font-size: 15px;
         padding: 0;
     }
 
@@ -186,8 +219,7 @@ It's not recommended to link this file directly in the HTML, and it should be im
     .navbar__link--active {
         display: inline-flex;
         align-items: center;
-        border-bottom: 1px solid transparent;
-        border-image: linear-gradient(to right, transparent 0%, var(--primary) 40%, var(--primary) 60%, transparent) 1;
+        overflow: visible;
     }
 
     .navbar__link--active a {
@@ -203,5 +235,17 @@ It's not recommended to link this file directly in the HTML, and it should be im
     .navbar__link--active svg {
         margin-right: 0.5rem;
         color: var(--primary);
+    }
+
+    .navlink-glow {
+        width: 5rem;
+        height: 5rem;
+        transform: translateX(-50%) translateY(-50%);
+        border-radius: 50%;
+        background: radial-gradient(var(--muted-primary) 20%, transparent 100%);
+        position: absolute;
+        z-index: 99;
+        filter: blur(30px);
+        pointer-events: none;
     }
 }

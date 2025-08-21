@@ -1,14 +1,20 @@
-import {Journal} from "../../../../common/icons/index.js";
+import {Journal} from "src/components/common/icons/index.js";
 import {Link} from "react-router-dom"
 
-function ArticleItem({className="", to, articleName}) {
+function ArticleItem({to, articleName}) {
     return (
-        <li className={"timeline-2__item timeline-2__article " + className}>
+        <li className={"timeline-2__article"}>
 
             <Journal className="timeline-2__icon"/>
 
             <span className="timeline-2-item__content">
-                Wrote <Link to={to}>{articleName}</Link>
+                <span>Wrote:</span>
+                <Link
+                    to={to}
+                    className="underline-on-hover"
+                >
+                    {articleName}
+                </Link>
             </span>
         </li>
     )
